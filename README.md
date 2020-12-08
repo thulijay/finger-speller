@@ -1,1 +1,1 @@
-# finger-speller
+# Finger-Speller
