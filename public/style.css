@@ -1,4 +1,8 @@
 .container{
     text-align: centre;
-    padding-top: 5em;
+    padding-top: 2em;
+}
+
+.header{
+    padding: 4em
 }
