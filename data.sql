@@ -1,4 +1,4 @@
-drop table if EXISTS exercises,progress,player,word;
+drop table if EXISTS exercises,progress,players,words;
 create table players
 (
     id serial not null primary key,
@@ -17,7 +17,7 @@ create table exercises
     player_ID INT,
     word_ID INT,
     FOREIGN KEY (player_ID) REFERENCES players(id),
-    FOREIGN KEY (word_ID)REFERENCES word(id)
+    FOREIGN KEY (word_ID)REFERENCES words(id)
 );
 create table progress
 (
