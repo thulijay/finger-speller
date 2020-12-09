@@ -7,7 +7,7 @@ create table player
 create table word
 (
     id serial not null primary key,
-    word text
+    wordtospell text
 
 );
 create table exercises
@@ -26,4 +26,23 @@ create table progress
     total_attempts int,
     playerid int,
     FOREIGN KEY (playerid)REFERENCES player(id)
-)
+);
+INSERT into word (wordtospell)values('a');
+INSERT into word (wordtospell)values('e');
+INSERT into word (wordtospell)values('i');
+INSERT into word (wordtospell)values('o');
+INSERT into word (wordtospell)values('u');
+INSERT into word (wordtospell)values('r');
+INSERT into word (wordtospell)values('t');
+INSERT into word (wordtospell)values('d');
+INSERT into word (wordtospell)values('n');
+INSERT into word (wordtospell)values('s');
+INSERT into word (wordtospell)values('to');
+INSERT into word (wordtospell)values('or');
+INSERT into word (wordtospell)values('in');
+INSERT into word (wordtospell)values('no');
+INSERT into word (wordtospell)values('son');
+INSERT into word (wordtospell)values('ran');
+INSERT into word (wordtospell)values('eat');
+
+
