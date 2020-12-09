@@ -1,4 +1,4 @@
-drop table if EXISTS exercises,progress,player,word;
+drop table if EXISTS exercises,progress,players,words;
 create table players
 (
     id serial not null primary key,
@@ -16,8 +16,8 @@ create table exercises
     id serial not null primary key,
     player_ID INT,
     word_ID INT,
-    FOREIGN KEY (player_ID) REFERENCES player(id),
-    FOREIGN KEY (word_ID)REFERENCES word(id)
+    FOREIGN KEY (player_ID) REFERENCES players(id),
+    FOREIGN KEY (word_ID)REFERENCES words(id)
 );
 create table progress
 (
@@ -26,7 +26,7 @@ create table progress
     failed_attempts int,
     total_attempts int,
     playerid int,
-    FOREIGN KEY (playerid)REFERENCES player(id)
+    FOREIGN KEY (playerid)REFERENCES players(id)
 );
 INSERT into words (wordtospell,level)values('a',1);
 INSERT into words(wordtospell,level)values('e',1);
