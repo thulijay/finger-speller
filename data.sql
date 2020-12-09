@@ -1,5 +1,5 @@
 drop table if EXISTS exercises,progress,player,word;
-create table player
+create table players
 (
     id serial not null primary key,
     name text

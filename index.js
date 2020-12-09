@@ -18,6 +18,13 @@ const pool = new Pool({
 // const waiter = Waiter(pool);
 // const waiterRoutes = WaiterRoutes(waiter);
 
+app.post('/players', async function (req, res) {
+const name = req.body.nameItem
+
+  res.render('index', {
+  
+});
+});
 
 app.use(session({
   secret: "<add a secret string here>",
