@@ -28,22 +28,22 @@ create table progress
     playerid int,
     FOREIGN KEY (playerid)REFERENCES players(id)
 );
-INSERT into words (wordtospell,level)values('a',1);
-INSERT into words(wordtospell,level)values('e',1);
-INSERT into words (wordtospell,level)values('i',1);
-INSERT into words(wordtospell,level)values('o',1);
-INSERT into words (wordtospell,level)values('u',1);
-INSERT into words (wordtospell,level)values('r',1);
-INSERT into words (wordtospell,level)values('t',1);
-INSERT into words(wordtospell,level)values('d',1);
-INSERT into words (wordtospell,level)values('n',1);
-INSERT into words(wordtospell,level)values('s',1);
-INSERT into words (wordtospell,level)values('to',2);
-INSERT into words (wordtospell,level)values('or',2);
-INSERT into words(wordtospell,level)values('in',2);
-INSERT into words (wordtospell,level)values('no',2);
-INSERT into words (wordtospell,level)values('son',3);
-INSERT into words (wordtospell,level)values('ran',3);
-INSERT into words (wordtospell,level)values('eat',3);
+INSERT into words (word,level)values('a',1);
+INSERT into words(word,level)values('e',1);
+INSERT into words (word,level)values('i',1);
+INSERT into words(word,level)values('o',1);
+INSERT into words (word,level)values('u',1);
+INSERT into words (word,level)values('r',1);
+INSERT into words (word,level)values('t',1);
+INSERT into words(word,level)values('d',1);
+INSERT into words (word,level)values('n',1);
+INSERT into words(word,level)values('s',1);
+INSERT into words (word,level)values('to',2);
+INSERT into words (word,level)values('or',2);
+INSERT into words(word,level)values('in',2);
+INSERT into words (word,level)values('no',2);
+INSERT into words (word,level)values('son',3);
+INSERT into words (word,level)values('ran',3);
+INSERT into words (word,level)values('eat',3);
 
 
