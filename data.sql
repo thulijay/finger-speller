@@ -4,10 +4,11 @@ create table players
     id serial not null primary key,
     name text
 );
-create table word
+create table words
 (
     id serial not null primary key,
-    wordtospell text
+    word text,
+    level int
 
 );
 create table exercises
@@ -27,22 +28,22 @@ create table progress
     playerid int,
     FOREIGN KEY (playerid)REFERENCES player(id)
 );
-INSERT into word (wordtospell)values('a');
-INSERT into word (wordtospell)values('e');
-INSERT into word (wordtospell)values('i');
-INSERT into word (wordtospell)values('o');
-INSERT into word (wordtospell)values('u');
-INSERT into word (wordtospell)values('r');
-INSERT into word (wordtospell)values('t');
-INSERT into word (wordtospell)values('d');
-INSERT into word (wordtospell)values('n');
-INSERT into word (wordtospell)values('s');
-INSERT into word (wordtospell)values('to');
-INSERT into word (wordtospell)values('or');
-INSERT into word (wordtospell)values('in');
-INSERT into word (wordtospell)values('no');
-INSERT into word (wordtospell)values('son');
-INSERT into word (wordtospell)values('ran');
-INSERT into word (wordtospell)values('eat');
+INSERT into words (wordtospell,level)values('a',1);
+INSERT into words(wordtospell,level)values('e',1);
+INSERT into words (wordtospell,level)values('i',1);
+INSERT into words(wordtospell,level)values('o',1);
+INSERT into words (wordtospell,level)values('u',1);
+INSERT into words (wordtospell,level)values('r',1);
+INSERT into words (wordtospell,level)values('t',1);
+INSERT into words(wordtospell,level)values('d',1);
+INSERT into words (wordtospell,level)values('n',1);
+INSERT into words(wordtospell,level)values('s',1);
+INSERT into words (wordtospell,level)values('to',2);
+INSERT into words (wordtospell,level)values('or',2);
+INSERT into words(wordtospell,level)values('in',2);
+INSERT into words (wordtospell,level)values('no',2);
+INSERT into words (wordtospell,level)values('son',3);
+INSERT into words (wordtospell,level)values('ran',3);
+INSERT into words (wordtospell,level)values('eat',3);
 
 
