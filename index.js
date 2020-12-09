@@ -13,7 +13,7 @@ const pool = new Pool({
   connectionString
 });
 
-const Speller = require("./temporaryFactory");
+const Speller = require("./fingerSpell");
 const SpellerRoutes = require('./routes');
 const speller = Speller(pool);
 const spellerRoutes = SpellerRoutes(speller);
