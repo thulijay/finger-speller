@@ -18,13 +18,13 @@ const SpellerRoutes = require('./routes');
 const speller = Speller(pool);
 const spellerRoutes = SpellerRoutes(speller);
 
-app.post('/players', async function (req, res) {
-const name = req.body.nameItem
+// app.post('/players', async function (req, res) {
+// const name = req.body.nameItem
 
-  res.render('index', {
+//   res.render('index', {
   
-});
-});
+// });
+// });
 
 app.use(session({
   secret: "<add a secret string here>",
