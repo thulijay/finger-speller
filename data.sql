@@ -1,4 +1,4 @@
-drop table if EXISTS exercises,player,word,progress;
+drop table if EXISTS exercises,progress,player,word;
 create table player
 (
     id serial not null primary key,
@@ -20,7 +20,10 @@ create table exercises
 );
 create table progress
 (
+    id serial not null primary key,
     successful_attempts int,
     failed_attempts int,
-    total_attempts int
+    total_attempts int,
+    playerid int,
+    FOREIGN KEY (playerid)REFERENCES player(id)
 )
