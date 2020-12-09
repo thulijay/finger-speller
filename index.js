@@ -18,8 +18,8 @@ const pool = new Pool({
 // const waiter = Waiter(pool);
 // const waiterRoutes = WaiterRoutes(waiter);
 
-app.post('/players', async function (req, res) {
-const name = req.body.nameItem
+app.post('/player', async function (req, res) {
+//const name = req.body.nameItem
 
   res.render('index', {
   
