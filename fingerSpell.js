@@ -21,9 +21,29 @@ const updateSuccess = ('update players set successful_attempts = successful_atte
 const updateTotal = ('update players set total_attempts = successful_attempts + 1 where playerid =$1', [playerid])
 
 }
+async function getPlayer() {
+    const playerData = await pool.query('select * from players');
+    return playerData.rows;
+}
+async function getWords() {
+    const wordData = await pool.query('select * from words');
+    return wordData.rows;
+}
+async  function getExercises() {
+    const exerciseData = await pool.query('select * from exercises')
+    return exerciseData.rows
+}
+async   function getProgress() {
+    const progressData = await pool.query('select * from progress')
+    return progressData.rows;
+}
     return {
         createPlayer,
-        updateProgress
+        updateProgress,
+           getPlayer,
+        getWords,
+        getExercises,
+        getProgress
 
 
     }
