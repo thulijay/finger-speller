@@ -16,16 +16,28 @@ module.exports = function fingerSpell(pool) {
             // console.log()
             console.log(level1Word)
             if (machineLetter === level1Word) {
-              
+
                 return "success"
             }
             else {
                 return
 
             }
-            
+
         }
 
+    }
+    async function level2Data() {
+        const wordDataLvl2 = await pool.query('select word from words where level= 2');
+        return wordDataLvl2.rows;
+
+    }
+    async function level2(){
+      const lvl2Word=await level2Data();
+      for (let i = 0; i < lvl2Word.length; i++) {
+          const level2Word = lvl2Word[i].word;
+          
+      }  
     }
 
     async function updateProgress() {
