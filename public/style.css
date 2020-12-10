@@ -15,6 +15,10 @@ body {
     padding: 4em;
 }
 
+.nameEntered{
+    border: 3em;
+}
+
 .row {
     display: flex;
   }
