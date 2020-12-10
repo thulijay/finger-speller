@@ -15,8 +15,6 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <script src="level.js"></script>
-
 	<title>Document</title>
 </head>
 <body>
@@ -35,12 +33,18 @@
             <a href="activity.html" class="btn btn-outline-light">Start</a>
             </div>
 
+            <form action="/players" method="POST">
+
             <input type="text" name="nameItem" placeholder="enter name" class="nameEntered form-control" id="validationTooltip03">
 
-            <button class="playerBtn btn btn-outline-light">Add Player
-            </button>    
-      
+           <!-- <input type="button" value="Player" class="bread btn btn-outline-light"> -->
+           <button type="submit" value="Player" class="bread btn btn-outline-light">h</button>
+
+        </form>
 </div>
 
 </body>
+<script type="module" src="../fingerSpell.js"></script>
+<script src="level.js" charset="utf-8"></script>
+
 </html>

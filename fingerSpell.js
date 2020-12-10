@@ -7,6 +7,7 @@ module.exports = function fingerSpell(pool) {
         const wordDataLvl1 = await pool.query('select word from words where level=1')
         return wordDataLvl1.rows;
     }
+    
     async function level1(machineLetter) {
         const lvl1Word = await level1Data()
         // const word=lvl1Word;
@@ -21,11 +22,8 @@ module.exports = function fingerSpell(pool) {
             }
             else {
                 return
-
-            }
-            
+            }   
         }
-
     }
 
     async function updateProgress() {
