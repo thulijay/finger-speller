@@ -3,41 +3,18 @@ module.exports = function fingerSpell(pool) {
         await pool.query('insert into players(name) values($1)', [name])
 
     }
-    async function level1Data() {
-        const wordDataLvl1 = await pool.query('select word from words where level=1')
-        return wordDataLvl1.rows;
-    }
-    async function level1(machineLetter) {
-        const lvl1Word = await level1Data()
-        // const word=lvl1Word;
-        // console.log(word)
-        for (let i = 0; i < lvl1Word.length; i++) {
-            const level1Word = lvl1Word[i].word;
-            // console.log()
-            console.log(level1Word)
-            if (machineLetter === level1Word) {
-
-                return "success"
-            }
-            else {
-                return
-
-            }
-
-        }
-
-    }
+    
     async function level2Data() {
         const wordDataLvl2 = await pool.query('select word from words where level= 2');
         return wordDataLvl2.rows;
 
     }
-    async function level2(){
-      const lvl2Word=await level2Data();
-      for (let i = 0; i < lvl2Word.length; i++) {
-          const level2Word = lvl2Word[i].word;
-          
-      }  
+    async function level2() {
+        const lvl2Word = await level2Data();
+        for (let i = 0; i < lvl2Word.length; i++) {
+            const level2Word = lvl2Word[i].word;
+
+        }
     }
 
     async function updateProgress() {
@@ -55,6 +32,31 @@ module.exports = function fingerSpell(pool) {
 
         //add successful and failed
         const updateTotal = ('update players set total_attempts = successful_attempts + 1 where playerid =$1', [playerid])
+
+    }
+
+    async function level1Data() {
+        const wordDataLvl1 = await pool.query('select word from words where level=1')
+        return wordDataLvl1.rows;
+    }
+    async function level1(machineLetter) {
+        const lvl1Word = await level1Data()
+        // const word=lvl1Word;
+        // console.log(word)
+        for (let i = 0; i < lvl1Word.length; i++) {
+            const level1Word = lvl1Word[i].word;
+            // console.log()
+           
+            if (machineLetter === level1Word) {
+
+                return "success";
+            }
+            else {
+                return 'fail'
+
+            }
+
+        }
 
     }
     async function getPlayer() {
@@ -104,7 +106,11 @@ module.exports = function fingerSpell(pool) {
         incorrectWord,
         totalAttempts,
         level1Data,
-        level1
+        level1,
+        level2,
+        level2Data
+        
+
 
 
     }
