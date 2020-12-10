@@ -54,6 +54,7 @@
                 letter  = pred.className;
             }
             labelContainer.innerHTML = letter;
+            console.log(letter)
         })
     }
     // async function predict() {
