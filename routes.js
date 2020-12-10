@@ -1,4 +1,24 @@
 module.exports = function spellRoutes(spellRoute) {
+
+async function players(req, res){
+    const name = req.body.nameItem
+
+    const create = await spellRoute.createPlayer(name);
+    res.render('index', {
+  
+         });
+}
+
+async function levelPage(req, res){
+const getWord = await spellRoute.level1Data();
+console.log({getWord});
+res.render('activity', {
+  level1Word: getWord
+});
+}
+
+
+
     async function progressData(req,res) {
         const progress = await spellRoute.getProgress()
         console.log(progress)
@@ -29,6 +49,8 @@ module.exports = function spellRoutes(spellRoute) {
         playerExercise,
          wordData,
         playerData, 
-        progressData
+        progressData,
+        players,
+        levelPage
     }
 }

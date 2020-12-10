@@ -13,6 +13,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="style.css">
+
 	<title>Document</title>
 </head>
 <body>
@@ -26,21 +28,32 @@
     <div class="container">
         <div class="col-md-12 text-center">
 
-            <a href="key.html" class="btn btn-outline-light">Key Reference</a>
+            <form action="/activity" method="GET">
 
+                <button type="submit" value="Player" class="btn btn-outline-light">Start</button>
+
+
+            </form>
+
+            <a href="key.html" class="btn btn-outline-light">Key Reference</a>
+        
             
             <a href="activity.html" class="btn btn-outline-light">Start</a>
+
             </div>
+
+            <form action="/players" method="POST">
 
             <input type="text" name="nameItem" placeholder="enter name" class="nameEntered form-control" id="validationTooltip03">
 
-           <input type="button" value="PLayer" class="bread btn btn-primary">
-      
-            
+           <!-- <input type="button" value="Player" class="bread btn btn-outline-light"> -->
+           <button type="submit" value="Player" class="bread btn btn-outline-light">h</button>
+
+        </form>
 </div>
 
-
 </body>
-<script src="level.js"></script>
-<link rel="stylesheet" href="style.css">
+<script type="module" src="../fingerSpell.js"></script>
+<script src="level.js" charset="utf-8"></script>
+
 </html>

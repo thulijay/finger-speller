@@ -3,8 +3,8 @@ module.exports = function fingerSpell(pool) {
         await pool.query('insert into players(name) values($1)', [name])
 
     }
-    
-    async function level2Data() {
+  
+   async function level2Data() {
         const wordDataLvl2 = await pool.query('select word from words where level= 2');
         return wordDataLvl2.rows;
 
@@ -13,6 +13,7 @@ module.exports = function fingerSpell(pool) {
         const lvl2Word = await level2Data();
         for (let i = 0; i < lvl2Word.length; i++) {
             const level2Word = lvl2Word[i].word;
+
 
         }
     }
@@ -34,6 +35,7 @@ module.exports = function fingerSpell(pool) {
         const updateTotal = ('update players set total_attempts = successful_attempts + 1 where playerid =$1', [playerid])
 
     }
+
 
     async function level1Data() {
         const wordDataLvl1 = await pool.query('select word from words where level=1')
@@ -59,18 +61,22 @@ module.exports = function fingerSpell(pool) {
         }
 
     }
+
     async function getPlayer() {
         const playerData = await pool.query('select * from players');
         return playerData.rows;
     }
+
     async function getWords() {
         const wordData = await pool.query('select * from words');
         return wordData.rows;
     }
+
     async function getExercises() {
         const exerciseData = await pool.query('select * from exercises')
         return exerciseData.rows
     }
+
     async function getProgress() {
         const progressData = await pool.query('select * from progress')
         return progressData.rows;
@@ -93,7 +99,6 @@ module.exports = function fingerSpell(pool) {
         await pool.query("update progress set total_attempts =($1) where playerid =$2", [total, id])
     }
 
-
     return {
         createPlayer,
         updateProgress,
@@ -106,11 +111,13 @@ module.exports = function fingerSpell(pool) {
         incorrectWord,
         totalAttempts,
         level1Data,
+
         level1,
+
+
         level2,
         level2Data
         
-
 
 
     }
