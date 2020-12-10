@@ -38,7 +38,7 @@ app.get('/wordData',spellerRoutes.wordData)
 
 app.get('/exercise',spellerRoutes.playerExercise)
 
-app.get('getWord', spellerRoutes.level1Data)
+app.get('/activity', spellerRoutes.levelPage)
 
 app.get('/progressdata',spellerRoutes.progressData)
 const PORT = process.env.PORT || 2009;

@@ -35,7 +35,6 @@ INSERT into words(word,level)values('o',1);
 INSERT into words (word,level)values('u',1);
 INSERT into words (word,level)values('r',1);
 INSERT into words (word,level)values('t',1);
-INSERT into words(word,level)values('d',1);
 INSERT into words (word,level)values('n',1);
 INSERT into words(word,level)values('s',1);
 INSERT into words (word,level)values('to',2);

@@ -9,13 +9,14 @@ async function players(req, res){
          });
 }
 
-async function level1Data(req, res){
+async function levelPage(req, res){
 const getWord = await spellRoute.level1Data();
-
+console.log({getWord});
 res.render('activity', {
   level1Word: getWord
 });
 }
+
 
 
     async function progressData(req,res) {
@@ -49,6 +50,7 @@ res.render('activity', {
          wordData,
         playerData, 
         progressData,
-        players
+        players,
+        levelPage
     }
 }
