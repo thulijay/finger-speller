@@ -14,7 +14,6 @@ module.exports = function fingerSpell(pool) {
         for (let i = 0; i < lvl2Word.length; i++) {
             const level2Word = lvl2Word[i].word;
 
-<<<<<<< HEAD
     async function level2Data() {
         const wordDataLvl2 = await pool.query('select word from words where level=2')
         return wordDataLvl2.rows;
@@ -29,8 +28,6 @@ module.exports = function fingerSpell(pool) {
         const lvl1Word = await level1Data()
         // const word=lvl1Word;
         // console.log(word)
-=======
->>>>>>> e0709eaf68b3dff5ab161c1804ddf37626b16e01
 
         }
     }
@@ -166,22 +163,10 @@ module.exports = function fingerSpell(pool) {
         incorrectWord,
         totalAttempts,
         level1Data,
-<<<<<<< HEAD
         level2Data,
         level3Data,
         level1,
         level2,
         level3
-=======
-
-        level1,
-
-
-        level2,
-        level2Data
-        
-
-
->>>>>>> e0709eaf68b3dff5ab161c1804ddf37626b16e01
     }
 }
