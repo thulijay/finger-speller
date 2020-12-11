@@ -9,28 +9,13 @@ module.exports = function fingerSpell(pool) {
         return wordDataLvl2.rows;
 
     }
-    async function level2() {
-        const lvl2Word = await level2Data();
-        for (let i = 0; i < lvl2Word.length; i++) {
-            const level2Word = lvl2Word[i].word;
-
-    async function level2Data() {
-        const wordDataLvl2 = await pool.query('select word from words where level=2')
-        return wordDataLvl2.rows;
-    }
+   
 
     async function level3Data() {
         const wordDataLvl3 = await pool.query('select word from words where level=3')
         return wordDataLvl3.rows;
     }
 
-    async function level1(machineLetter) {
-        const lvl1Word = await level1Data()
-        // const word=lvl1Word;
-        // console.log(word)
-
-        }
-    }
 
     async function level2(machineLetter) {
         const lvl2Word = await level2Data()
