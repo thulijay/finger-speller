@@ -9,6 +9,16 @@ module.exports = function fingerSpell(pool) {
         return wordDataLvl1.rows;
     }
 
+    async function level2Data() {
+        const wordDataLvl2 = await pool.query('select word from words where level=2')
+        return wordDataLvl2.rows;
+    }
+
+    async function level3Data() {
+        const wordDataLvl3 = await pool.query('select word from words where level=3')
+        return wordDataLvl3.rows;
+    }
+
     async function level1(machineLetter) {
         const lvl1Word = await level1Data()
         // const word=lvl1Word;
@@ -19,6 +29,44 @@ module.exports = function fingerSpell(pool) {
             // console.log()
             console.log({level1Word})
             if (machineLetter === level1Word) {
+              
+                return "success"
+            }
+            else {
+                return
+            }   
+        }
+    }
+
+    async function level2(machineLetter) {
+        const lvl2Word = await level2Data()
+        // const word=lvl1Word;
+        // console.log(word)
+
+        for (let i = 0; i < lvl2Word.length; i++) {
+            let level2Word = lvl2Word[i].word;
+            // console.log()
+            console.log({level2Word})
+            if (machineLetter === level2Word) {
+              
+                return "success"
+            }
+            else {
+                return
+            }   
+        }
+    }
+
+    async function level3(machineLetter) {
+        const lvl3Word = await level3Data()
+        // const word=lvl1Word;
+        // console.log(word)
+
+        for (let i = 0; i < lvl3Word.length; i++) {
+            let level3Word = lvl3Word[i].word;
+            // console.log()
+            console.log({level3Word})
+            if (machineLetter === level3Word) {
               
                 return "success"
             }
@@ -95,6 +143,10 @@ module.exports = function fingerSpell(pool) {
         incorrectWord,
         totalAttempts,
         level1Data,
-        level1
+        level2Data,
+        level3Data,
+        level1,
+        level2,
+        level3
     }
 }

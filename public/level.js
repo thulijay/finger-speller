@@ -12,7 +12,7 @@ const btn=document.querySelector('.bread');
 
 btn.addEventListener('click',function(){
   var name = nameElem.value
-alert(name)
+alert(name+" has been Logged in to Spell-It")
  console.log(name)
 
 })

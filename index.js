@@ -40,6 +40,15 @@ app.get('/exercise',spellerRoutes.playerExercise)
 
 app.get('/activity', spellerRoutes.levelPage)
 
+app.get('/level1',spellerRoutes.loadLevel1)
+
+app.get('/level2',spellerRoutes.loadLevel2)
+
+app.get('/level3',spellerRoutes.loadLevel3)
+
+app.get('/key',spellerRoutes.key)
+
+
 app.get('/progressdata',spellerRoutes.progressData)
 const PORT = process.env.PORT || 2009;
 app.listen(PORT, function () {

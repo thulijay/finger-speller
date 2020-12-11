@@ -1,0 +1,29 @@
+<div class="activity">
+ 
+<div class="startBtn">
+<button type="button" class="btn btn-outline-light" onclick="init()">Start</button>
+</div>
+
+<div id="webcam-container"></div>
+<div class="display "id="label-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+</div>
+
+
+{{!-- <div class="display2"id="wordDisplay"></div> --}}
+        <form action="/level2" method="GET">
+
+<div class="display2">
+
+<ul class="letters">{{#each level2Word}}
+<li>{{this.word}}</li>
+{{/each}}
+</ul>
+</div>
+<form>
+
+<div>
+
+    </div>
