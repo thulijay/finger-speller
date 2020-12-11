@@ -28,6 +28,7 @@
         // append elements to the DOM
         document.getElementById("webcam-container").appendChild(webcam.canvas);
         labelContainer = document.getElementById("label-container");
+        wordDisplay = document.getElementById("wordDisplay");
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
         }
@@ -54,6 +55,20 @@
                 letter  = pred.className;
             }
             labelContainer.innerHTML = letter;
+
+         
+           // if (labelContainer.innerHTML = 'o'){
+            //     wordDisplay.innerHTML = 'E'
+            // }
+            //  } else if (labelContainer.innerHTML = 'a'){
+            //    wordDisplay.innerHTML = 'O'
+            // } else if (labelContainer.innerHTML = 'o'){
+            //     wordDisplay.innerHTML = 'R'
+            // } else if (labelContainer.innerHTML = 'r'){
+            //     wordDisplay.innerHTML = 'U'
+            // } else if (labelContainer.innerHTML = 'u'){
+            //     wordDisplay.innerHTML = 'E'
+            // }
             console.log(letter)
         })
     }

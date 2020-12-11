@@ -14,7 +14,62 @@ module.exports = function fingerSpell(pool) {
         for (let i = 0; i < lvl2Word.length; i++) {
             const level2Word = lvl2Word[i].word;
 
+<<<<<<< HEAD
+    async function level2Data() {
+        const wordDataLvl2 = await pool.query('select word from words where level=2')
+        return wordDataLvl2.rows;
+    }
 
+    async function level3Data() {
+        const wordDataLvl3 = await pool.query('select word from words where level=3')
+        return wordDataLvl3.rows;
+    }
+
+    async function level1(machineLetter) {
+        const lvl1Word = await level1Data()
+        // const word=lvl1Word;
+        // console.log(word)
+=======
+>>>>>>> e0709eaf68b3dff5ab161c1804ddf37626b16e01
+
+        }
+    }
+
+    async function level2(machineLetter) {
+        const lvl2Word = await level2Data()
+        // const word=lvl1Word;
+        // console.log(word)
+
+        for (let i = 0; i < lvl2Word.length; i++) {
+            let level2Word = lvl2Word[i].word;
+            // console.log()
+            console.log({level2Word})
+            if (machineLetter === level2Word) {
+              
+                return "success"
+            }
+            else {
+                return
+            }   
+        }
+    }
+
+    async function level3(machineLetter) {
+        const lvl3Word = await level3Data()
+        // const word=lvl1Word;
+        // console.log(word)
+
+        for (let i = 0; i < lvl3Word.length; i++) {
+            let level3Word = lvl3Word[i].word;
+            // console.log()
+            console.log({level3Word})
+            if (machineLetter === level3Word) {
+              
+                return "success"
+            }
+            else {
+                return
+            }   
         }
     }
 
@@ -111,6 +166,13 @@ module.exports = function fingerSpell(pool) {
         incorrectWord,
         totalAttempts,
         level1Data,
+<<<<<<< HEAD
+        level2Data,
+        level3Data,
+        level1,
+        level2,
+        level3
+=======
 
         level1,
 
@@ -120,5 +182,6 @@ module.exports = function fingerSpell(pool) {
         
 
 
+>>>>>>> e0709eaf68b3dff5ab161c1804ddf37626b16e01
     }
 }

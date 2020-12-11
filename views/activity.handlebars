@@ -1,16 +1,17 @@
-<div class="activity">
-    <div>Teachable Machine Image Model</div>
 
-<button type="button" onclick="init()">Start</button>
-<div id="webcam-container"></div>
-<div id="label-container"></div>
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<h2>Choose a Level</h2>
+<div class="levelDisplay">
+        <form action="/level" method="GET">
 
+<div class="level">
+        <a href="level1" class="btn btn-outline-light">Level 1</a>
 </div>
-<p>{{#each level1Word}}</p>
-{{this.word}}
-{{/each}}
-<div>
+<div class="level">
+        <a href="level2" class="btn btn-outline-light">Level 2</a>
+</div>
+<div class="level">
+        <a href="level3" class="btn btn-outline-light">Level 3</a>
+</div>
+        </form>
 
-    </div>
+    <div>
